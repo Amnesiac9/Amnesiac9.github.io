@@ -1,0 +1,148 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Flatline Sans", sans-serif;
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;  
+  
+}
+
+.options-textbox {
+  max-width: 100%;
+  background-color: #e9e9e9;
+  color: #2c2c2c;
+  border: 2px solid;
+  border-radius: 6px;
+}
+
+.output {
+  text-align: center;
+  display: inline-block; /* so height and width actually take affect */
+  max-width: 50%;
+  height: 2em; /* so overflow hidden works and keeps text on one row */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* important to show ellipsis, or words will just be broken off */
+}
+
+.list-group-item {
+  John 
+  max-width: 100%;
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* important to show ellipsis, or words will just be broken off */
+}
+
+.col {
+  text-align: center;
+}
+
+.dark,
+.dark * {
+    background-color: #222;
+    color: #d9d9d9;
+    border-color: #d9d9d9;
+}
+
+.range-slider {
+  padding: 1rem; 
+  font-size: 1rem;
+  margin: 0rem;
+}
+
+.max-slider {
+    -webkit-appearance: none;
+    width: 20%;
+    height: 8px;
+    opacity: 0.50;
+    border: 2px solid;
+    border-radius: 6px;
+    background-color: #232420;
+   }
+
+.max-slider:hover {
+    opacity: 1;
+   }
+
+.error-textbox {
+  border-color:#9d1c0d;
+}
+
+.toggles {
+    font-size: 1rem;
+    align-self: flex-end;
+    margin: 0.1rem;
+}
+
+.options-toggle {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #cecece;
+    border-radius: 6px;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 0.70rem;
+    padding: 0.1875rem;
+    margin-left: 0.25rem;
+}
+
+.options-toggle:hover {
+  border: 2px solid #fdfdfd;
+}
+
+.toggle-on {
+  background-color: #45693f;
+  color: #e6e6e6;
+}
+
+.toggle-off {
+  background-color: #a02e2e;
+}
+
+.switch {
+    font-size: 0.65rem;
+    align-self: flex-start;
+    margin: 0.1rem;
+}
+
+.darkmode-switch {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #555;
+    border-radius: 1.25rem;
+    width: 3.125rem;
+    text-align: center;
+    font-size: 0.50rem;
+    padding: 0.1875rem;
+    margin-left: 0.25rem;
+    opacity: 0.50;
+}
+
+.darkmode-switch:hover {
+  border: 2px solid #e0e0e0;
+}
+
+
+.split-number-button { 
+    background-color: #427797; /* Blue */
+    border: solid;
+    color: #e6e6e6;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    border-radius: 14px;
+    width: 40%;
+    transition: transform 0.2s;
+}
+
+.split-number-button:hover {
+  background-color: #2d60ac;
+  transform: scale(1.05);
+}
+

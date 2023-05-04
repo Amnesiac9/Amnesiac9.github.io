@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head class="dark">
+  <meta charset="utf-8" />
+  <title>Transaction Splitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <div class="switch">Dark mode:
+    <span class="darkmode-switch">ON</span>
+  </div>
+
+  <div </div>
+
+    <h1 align=center>
+      Transaction Splitter
+    </h1>
+    <p align=center>
+      Enter a total and a transaction count to split into unique values
+    </p>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      var consoleProxy = (function (logger) {
+        return function () {
+          logger.apply(this, arguments);
+
+          var output = $('#output');
+          for (var i = 0; i < arguments.length; i++) {
+            output.append($(`<li class="list-group-item"><pre>${arguments[i]}</pre></li>`));
+          }
+        }
+      })(console.log);
+
+      console.log = consoleProxy;
+
+      function clearOutput() {
+        $('#output').empty();
+      }
+
+      function splitNumber() {
+        splitinate();
+      }
+
+      function reprintOutput() {
+        reprintOutput();
+      }
+
+      function reprintPreviousOutput() {
+        reprintPreviousOutput();
+      }
+
+
+    </script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body style="margin-top: 2rem" class="dark">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <label for="total">Total: </label>
+        <input class="options-textbox" type="int" id="total" name="total" required minlength="1" maxlength="8" size="10"
+          value="100">
+
+        <label for="transCount">Transaction Count: </label>
+        <input class="options-textbox" type="int" id="transCount" name="transCount" required minlength="1" maxlength="8"
+          size="10" value="5">
+
+        <div class="range-slider">
+          <label for="maxSlider">Max Multiplier: </label>
+          <input type="range" min="100" max="200" value="175" class="max-slider" id="maxSlider" oninput="changeValue()"
+            ondblclick="resetMaxSlider()">
+          <value id="maxValueText">1.75</value>
+        </div>
+
+        <div class="toggles">
+          <label for="unique-toggle">Unique Values: </label>
+          <toggle class="options-toggle toggle-on" id="unique-toggle" name=uniqueToggle onclick="toggleButtonUnique()">
+            YES</toggle>
+          <label for="index-toggle">Index Values: </label>
+          <toggle class="options-toggle toggle-on" id="index-toggle" name=indexToggle onclick="toggleButtonIndex()">YES
+          </toggle>
+        </div>
+
+        <br>
+        <div class="col">
+          <button type="button" class="split-number-button" onclick="splitNumber()">Split Number</button>
+        </div>
+
+        <div class="col">
+          <h3>
+            Output
+            <button type="button" class="output" onclick="clearOutput()">clear</button>
+            <button type="button" class="output" onclick="reprintOutput()">reprint</button>
+            <button type="button" class="output" onclick="reprintPreviousOutput()">reprint prev.</button>
+          </h3>
+          <ul id="output" class="list-group">
+          </ul>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
